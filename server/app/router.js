@@ -1,19 +1,19 @@
 const express = require("express");
 
 const router = express.Router();
-const client = require("../database/client");
+// const client = require("../database/client");
 
 /* ************************************************************************* */
 // Define Your API Routes Here
-router.get("/tasks", (req, res) => {
-  client
-    .query(
-      "SELECT * FROM tasks INNER JOIN status ON  tasks.id_status = status.id"
-    )
-    .then((tasks) => {
-      res.status(200).json(tasks[0]);
-    });
-});
+// router.get("/tasks", (req, res) => {
+//   client
+//     .query(
+//       "SELECT * FROM tasks INNER JOIN status ON  tasks.id_status = status.id"
+//     )
+//     .then((tasks) => {
+//       res.status(200).json(tasks[0]);
+//     });
+// });
 /* ************************************************************************* */
 
 // Import itemActions module for handling item-related operations

@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import Todo from "./components/Todo";
+import Form from "./components/Form";
 import "./App.css";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
   return (
     <main className="container">
       <h1>To-Do List</h1>
+      <Form />
       <section>
         {tasks.map((task) => (
           <Todo task={task} key={task.id} />

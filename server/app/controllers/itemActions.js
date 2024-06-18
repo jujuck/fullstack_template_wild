@@ -48,9 +48,10 @@ const add = async (req, res, next) => {
 
   try {
     // Insert the item into the database
-    const insertId = await client.query("INSERT INTO items(title) VALUES (?)", [
-      item.title,
-    ]);
+    const insertId = await client.query(
+      "INSERT INTO tasks (id_status,task, deadline, who) VALUES (?,?, ?, ?);",
+      [item.id_status, item.task, item.deadline, item.who]
+    );
 
     // Respond with HTTP 201 (Created) and the ID of the newly inserted item
     res.status(201).json({ insertId });

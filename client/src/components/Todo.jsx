@@ -1,10 +1,10 @@
 function Todo({ task }) {
   return (
-    <div className="row">
+    <div>
       <h2>{task.task}</h2>
       <h4>Auteur : {task.who}</h4>
-      <p>DeadLine {task.deadLine}</p>
-      <p>Statut: {task.status}</p>
+      <p>DeadLine {task.deadline}</p>
+      <p>Status: {task.status}</p>
     </div>
   );
 }

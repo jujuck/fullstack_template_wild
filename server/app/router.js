@@ -20,13 +20,13 @@ const router = express.Router();
 const itemActions = require("./controllers/itemActions");
 
 // Route to get a list of items
-router.get("/items", itemActions.browse);
+router.get("/tasks", itemActions.browse);
 
 // Route to get a specific item by ID
 router.get("/items/:id", itemActions.read);
 
 // Route to add a new item
-router.post("/items", itemActions.add);
+router.post("/tasks", itemActions.add);
 
 /* ************************************************************************* */
 

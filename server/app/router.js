@@ -18,6 +18,7 @@ const router = express.Router();
 
 // Import itemActions module for handling item-related operations
 const itemActions = require("./controllers/itemActions");
+const statusActions = require("./controllers/statusAction");
 
 // Route to get a list of items
 router.get("/tasks", itemActions.browse);
@@ -27,6 +28,8 @@ router.get("/items/:id", itemActions.read);
 
 // Route to add a new item
 router.post("/tasks", itemActions.add);
+
+router.get("/status", statusActions.browse);
 
 /* ************************************************************************* */
 

@@ -5,7 +5,7 @@ const initialTask = {
   task: "",
   who: "",
   deadline: "",
-  status_id: null,
+  id_status: "",
 };
 
 function Form() {
@@ -34,6 +34,37 @@ function Form() {
           value={task.task}
           name="task"
           onChange={(event) => handleTask(event)}
+          required
+        />
+      </label>
+      <label>
+        Who:
+        <input
+          type="text"
+          value={task.who}
+          onChange={(event) => handleTask(event)}
+          name="who"
+          required
+        />
+      </label>
+      <label>
+        DeadLine:
+        <input
+          type="text"
+          value={task.deadline}
+          onChange={(event) => handleTask(event)}
+          name="deadline"
+          required
+        />
+      </label>
+      <label>
+        Status:
+        <input
+          type="number"
+          value={task.id_status}
+          onChange={(event) => handleTask(event)}
+          name="id_status"
+          required
         />
       </label>
       <button type="submit">Add</button>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import connexion from "../services/connexion";
+import Select from "./Form/Select";
 
 const initialTask = {
   task: "",
@@ -57,16 +58,7 @@ function Form() {
           required
         />
       </label>
-      <label>
-        Status:
-        <input
-          type="number"
-          value={task.id_status}
-          onChange={(event) => handleTask(event)}
-          name="id_status"
-          required
-        />
-      </label>
+      <Select handleForm={handleTask} />
       <button type="submit">Add</button>
     </form>
   );
